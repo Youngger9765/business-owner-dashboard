@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1930">
+  <meta name="description" content="企業老闆經營儀表板，展示營收、支出、獲利、產品銷售與重要客戶的模擬數據">
+  <title>經營儀表板｜衡星企業</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="主要導覽">
+      <a class="brand" href="#overview" aria-label="衡星企業，回到總覽">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M4 28 14 8l6 12 5-8 7 16H4Z" fill="currentColor"/><path d="M4 28h28" stroke="#fff" stroke-width="2"/></svg></span>
+        <span class="brand-copy"><strong>衡星企業</strong><small>EXECUTIVE HUB</small></span>
+      </a>
+      <div class="sidebar-label">工作空間</div>
+      <nav class="nav-list" aria-label="儀表板區塊">
+        <a class="nav-link active" href="#overview" data-nav="overview"><span class="nav-icon" aria-hidden="true">▦</span>經營總覽</a>
+        <a class="nav-link" href="#revenue" data-nav="revenue"><span class="nav-icon" aria-hidden="true">⌁</span>營收分析</a>
+        <a class="nav-link" href="#products" data-nav="products"><span class="nav-icon" aria-hidden="true">◫</span>產品表現</a>
+        <a class="nav-link" href="#customers" data-nav="customers"><span class="nav-icon" aria-hidden="true">♙</span>重要客戶</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon">✦</span><strong>每個數字，都是下一步的線索</strong><span>掌握趨勢，做出更好的經營決策</span></div>
+        <div class="sidebar-user"><span class="avatar">衡</span><span><strong>經營者視角</strong><small>展示模式</small></span><span class="user-more">⋯</span></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-button" type="button" id="menuButton" aria-label="開啟選單" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+        <div class="breadcrumb">工作空間 <span>/</span> <strong>經營總覽</strong></div>
+        <div class="topbar-right"><span class="demo-pill"><span class="demo-dot"></span> 模擬數據展示</span><span class="topbar-divider"></span><span class="top-avatar">衡</span></div>
+      </header>
+
+      <main id="overview" class="content">
+        <section class="page-heading" aria-labelledby="pageTitle">
+          <div><div class="eyebrow">BUSINESS OVERVIEW <span></span> 2026 年 10 月</div><h1 id="pageTitle">經營儀表板</h1><p>用清楚的數字，掌握企業每一步成長</p></div>
+          <div class="heading-actions"><span class="updated">資料更新：2026 / 10 / 21</span><button class="export-button" id="exportButton" type="button"><span aria-hidden="true">⇩</span> 匯出報表</button></div>
+        </section>
+
+        <section class="hero" aria-label="本月經營摘要">
+          <div class="hero-copy"><span class="hero-kicker">本月經營快訊</span><h2>穩健成長，持續向前<span class="sparkle">✦</span></h2><p>本月營業額較上月成長 <strong>12.8%</strong>，獲利率維持在 <strong>32.5%</strong>，整體表現穩定向上</p></div>
+          <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 310 170"><defs><linearGradient id="lineGradient" x1="0" x2="1"><stop stop-color="#86a8ff"/><stop offset="1" stop-color="#63e3ce"/></linearGradient><linearGradient id="fillGradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8cafff" stop-opacity=".34"/><stop offset="1" stop-color="#8cafff" stop-opacity="0"/></linearGradient></defs><path d="M8 145H298M8 98H298M8 51H298" stroke="#fff" opacity=".12" stroke-dasharray="5 8"/><path d="M13 132 59 118 101 126 144 79 187 92 231 48 290 20V156H13Z" fill="url(#fillGradient)"/><path d="M13 132 59 118 101 126 144 79 187 92 231 48 290 20" fill="none" stroke="url(#lineGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="290" cy="20" r="7" fill="#6ee4d1" stroke="#c1fff4" stroke-width="4"/></svg></div>
+        </section>
+
+        <section class="metrics" aria-label="本月關鍵指標">
+          <article class="metric-card revenue-card"><div class="metric-top"><span class="metric-icon blue" aria-hidden="true">↗</span><span class="change positive">↗ 12.8%</span></div><div class="metric-label">本月營業額</div><div class="metric-value">NT$ 2,480,000</div><div class="metric-foot">較上月增加 NT$ 281,000</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon amber" aria-hidden="true">↘</span><span class="change neutral">↘ 3.2%</span></div><div class="metric-label">本月支出</div><div class="metric-value">NT$ 1,674,000</div><div class="metric-foot">較上月減少 NT$ 55,000</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon green" aria-hidden="true">◆</span><span class="change positive">↗ 18.6%</span></div><div class="metric-label">本月獲利</div><div class="metric-value">NT$ 806,000</div><div class="metric-foot">獲利率 32.5%</div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-icon purple" aria-hidden="true">◎</span><span class="change positive">↗ 8.4%</span></div><div class="metric-label">本月成交訂單</div><div class="metric-value">328 <span class="value-unit">筆</span></div><div class="metric-foot">平均客單價 NT$ 7,561</div></article>
+        </section>
+
+        <div class="chart-grid">
+          <section id="revenue" class="panel trend-panel" aria-labelledby="trendTitle"><div class="panel-header"><div><div class="section-kicker">REVENUE TREND</div><h2 id="trendTitle">每月營收趨勢</h2><p>追蹤營業額變化，看見成長軌跡</p></div><div class="range-switch" role="group" aria-label="營收趨勢顯示期間"><button type="button" class="range-button" data-range="6" aria-pressed="false">近 6 個月</button><button type="button" class="range-button selected" data-range="12" aria-pressed="true">近 12 個月</button></div></div><div class="chart-legend"><span class="legend-line"></span>營業額 <span class="chart-unit">單位：新台幣萬元</span></div><div class="chart-wrap"><svg id="revenueChart" class="revenue-chart" role="img" aria-label="近十二個月每月營收折線圖"></svg></div><div id="chartSummary" class="chart-summary" aria-live="polite"></div></section>
+          <section id="products" class="panel product-panel" aria-labelledby="productsTitle"><div class="panel-header"><div><div class="section-kicker">SALES MIX</div><h2 id="productsTitle">各產品銷售占比</h2><p>本月各產品線營收分布</p></div><span class="period-tag">2026 年 10 月</span></div><div class="donut-layout"><div class="donut-wrap"><div class="donut" role="img" aria-label="企業方案 42%、專業服務 28%、雲端訂閱 18%、其他 12%"><div class="donut-center"><small>總營收</small><strong>248<span>萬</span></strong></div></div></div><div class="product-list"><div class="product-row"><span class="product-dot" style="--dot:#5574e8"></span><span>企業方案</span><strong>42%</strong></div><div class="product-row"><span class="product-dot" style="--dot:#37bda6"></span><span>專業服務</span><strong>28%</strong></div><div class="product-row"><span class="product-dot" style="--dot:#f3b75a"></span><span>雲端訂閱</span><strong>18%</strong></div><div class="product-row"><span class="product-dot" style="--dot:#a9b4cb"></span><span>其他</span><strong>12%</strong></div></div></div><div class="product-note">主要營收來源 <strong>企業方案</strong>，貢獻本月營收的 42%</div></section>
+        </div>
+
+        <section id="customers" class="panel customers-panel" aria-labelledby="customersTitle"><div class="panel-header customers-heading"><div><div class="section-kicker">TOP CUSTOMERS</div><h2 id="customersTitle">前五大客戶</h2><p>依本月營業額排序，掌握重要合作關係</p></div><span class="period-tag">2026 年 10 月</span></div><div class="table-scroll"><table><thead><tr><th scope="col">排名</th><th scope="col">客戶名稱</th><th scope="col">合作類型</th><th scope="col">本月營業額</th><th scope="col">營收占比</th></tr></thead><tbody><tr><td><span class="rank top-rank">01</span></td><td><span class="customer-name"><span class="customer-logo logo-a">遠</span><strong>遠景科技</strong></span></td><td><span class="type-tag">企業方案</span></td><td class="amount">NT$ 428,000</td><td><div class="share"><span class="share-track"><span style="width:17.3%"></span></span><strong>17.3%</strong></div></td></tr><tr><td><span class="rank top-rank">02</span></td><td><span class="customer-name"><span class="customer-logo logo-b">青</span><strong>青禾生活</strong></span></td><td><span class="type-tag">專業服務</span></td><td class="amount">NT$ 362,000</td><td><div class="share"><span class="share-track"><span style="width:14.6%"></span></span><strong>14.6%</strong></div></td></tr><tr><td><span class="rank top-rank">03</span></td><td><span class="customer-name"><span class="customer-logo logo-c">星</span><strong>星拓設計</strong></span></td><td><span class="type-tag">企業方案</span></td><td class="amount">NT$ 305,000</td><td><div class="share"><span class="share-track"><span style="width:12.3%"></span></span><strong>12.3%</strong></div></td></tr><tr><td><span class="rank">04</span></td><td><span class="customer-name"><span class="customer-logo logo-d">沐</span><strong>沐光餐飲</strong></span></td><td><span class="type-tag">雲端訂閱</span></td><td class="amount">NT$ 244,000</td><td><div class="share"><span class="share-track"><span style="width:9.8%"></span></span><strong>9.8%</strong></div></td></tr><tr><td><span class="rank">05</span></td><td><span class="customer-name"><span class="customer-logo logo-e">合</span><strong>合創顧問</strong></span></td><td><span class="type-tag">專業服務</span></td><td class="amount">NT$ 198,000</td><td><div class="share"><span class="share-track"><span style="width:8%"></span></span><strong>8.0%</strong></div></td></tr></tbody></table></div><div class="table-footer"><span>前五大客戶合計營收 <strong>NT$ 1,537,000</strong></span><span>占本月總營收 <strong>62.0%</strong></span></div></section>
+        <footer class="footer"><span>© 2026 衡星企業 · 經營儀表板</span><span>此頁為展示作品，所有數據與客戶名稱均為模擬</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-scrim" id="mobileScrim" hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
