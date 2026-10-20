@@ -97,6 +97,9 @@ function renderChart() {
 function renderMetrics(data) {
   const latest = data.months.at(-1);
   const previous = data.months.at(-2);
+  document.getElementById('revenueLabel').textContent = `${formatMonth(latest.month)}營業額`;
+  document.getElementById('expenseLabel').textContent = `${formatMonth(latest.month)}支出`;
+  document.getElementById('profitLabel').textContent = `${formatMonth(latest.month)}獲利`;
   document.getElementById('revenueValue').textContent = formatMoney(latest.revenue);
   setChange('revenueChange', changePercent(latest.revenue, previous?.revenue));
   document.getElementById('revenueFoot').textContent = previous
@@ -118,6 +121,12 @@ function renderMetrics(data) {
     document.getElementById('profitValue').textContent = '—';
     setChange('profitChange', null, '請提供支出');
     document.getElementById('profitFoot').textContent = '加入「支出」欄以計算';
+  }
+
+  if (importedData) {
+    document.getElementById('ordersValue').textContent = '—';
+    setChange('ordersChange', null, '未匯入資料');
+    document.getElementById('ordersFoot').textContent = '檔案沒有訂單欄位';
   }
 
   const revenueChange = changePercent(latest.revenue, previous?.revenue);
@@ -153,7 +162,9 @@ function renderProducts(data) {
   if (cumulative < 100) stops.push(`#d9dfeb ${cumulative}% 100%`);
   donut.style.background = `conic-gradient(${stops.join(',')})`;
   donut.setAttribute('aria-label', visible.map(row => `${row.name} ${(row.revenue / total * 100).toFixed(1)}%`).join('、'));
-  document.getElementById('donutTotal').textContent = `${(total / 10000).toFixed(total % 10000 ? 1 : 0)}<span>萬</span>`;
+  const donutTotal = document.getElementById('donutTotal');
+  donutTotal.replaceChildren(document.createTextNode((total / 10000).toFixed(total % 10000 ? 1 : 0)));
+  const unit = document.createElement('span'); unit.textContent = '萬'; donutTotal.append(unit);
   list.replaceChildren(...visible.map((row, index) => {
     const item = document.createElement('div'); item.className = 'product-row';
     const dot = document.createElement('span'); dot.className = 'product-dot'; dot.style.setProperty('--dot', palette[index % palette.length]);
