@@ -14,6 +14,8 @@
 
 Excel 檔案以 SheetJS Community Edition 讀取，載入方式參考 [官方瀏覽器安裝說明](https://docs.sheetjs.com/docs/getting-started/installation/standalone/)
 
+GitHub Pages 會在 master 分支更新後重新部署
+
 ## 設計參考
 
 資訊架構參考 [Start Bootstrap 的 SB Admin 2](https://github.com/StartBootstrap/startbootstrap-sb-admin-2)，該專案採 [MIT License](https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
